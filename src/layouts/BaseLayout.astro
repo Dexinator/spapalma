@@ -1,11 +1,16 @@
 ---
-import YukinaConfig from "../../yukina.config";
+import SpaConfig from "../../yukina.config";
+import GlobalStyles from "../components/GlobalStyles.astro";
 import BaseHead from "../components/BaseHead.astro";
 ---
 
-<html lang={YukinaConfig.locale}>
-  <BaseHead />
-  <body class="overflow-y-hidden">
+<!doctype html>
+<html lang={SpaConfig.locale}>
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <GlobalStyles />
     <slot />
   </body>
 </html>

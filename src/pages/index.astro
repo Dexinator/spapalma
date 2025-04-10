@@ -1,0 +1,129 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Icon } from "astro-icon/components";
+// Importar componentes si se crean después
+// import Hero from '../components/Hero.astro';
+// import Philosophy from '../components/Philosophy.astro';
+// import ServicesHighlight from '../components/ServicesHighlight.astro';
+// import Testimonials from '../components/Testimonials.astro';
+// import BookingSection from '../components/BookingSection.astro';
+---
+
+<MainLayout title="SPA para el Alma - Bienestar Integral">
+
+  <!-- Sección Hero -->
+  <section id="hero" class="min-h-[60vh] flex items-center justify-center text-center bg-gradient-to-b from-[var(--background-color-accent)] to-[var(--background-color-soft)]">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[var(--text-color-dark)]">Reconecta con tu Esencia</h1>
+      <p class="text-xl md:text-2xl mb-8 text-[var(--text-color-dark)] opacity-90">Descubre el poder transformador de la biodecodificación y experiencias sensoriales únicas.</p>
+      <a href="#services" class="inline-block px-8 py-3 rounded bg-[var(--secondary-color-1)] text-white hover:bg-[var(--primary-color)] transition-colors">Explora Nuestros Servicios</a>
+    </div>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="services" class="py-20 bg-[var(--background-color-light)]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Nuestros Servicios</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        {/* Servicio: Biodecodificación */}
+        <div class="service-card p-8 rounded-lg shadow-md bg-[var(--background-color-soft)] text-center">
+          {/* Icono Placeholder */}
+          <div class="text-5xl mb-4 text-[var(--primary-color)]">🧬</div>
+          <h3 class="text-2xl font-semibold mb-4">Biodecodificación</h3>
+          <p class="mb-6 text-[var(--text-color)]">Libera emociones atrapadas y comprende el origen de tus síntomas físicos o conflictos recurrentes. Una terapia profunda para sanar desde la raíz.</p>
+          <h4 class="font-semibold mb-2">¿Para Quién es?</h4>
+          <p class="text-sm mb-6 text-[var(--text-color-light)]">Personas buscando respuestas a síntomas inexplicables, patrones repetitivos o que deseen una comprensión más profunda de sí mismas.</p>
+          <a href="/reservar" class="inline-block px-6 py-2 rounded bg-[var(--secondary-color-1)] text-white text-sm hover:bg-[var(--primary-color)] transition-colors">Reservar Sesión</a>
+        </div>
+        {/* Servicio: Cenas Sensoriales */}
+        <div class="service-card p-8 rounded-lg shadow-md bg-[var(--background-color-soft)] text-center">
+          {/* Icono Placeholder */}
+          <div class="text-5xl mb-4 text-[var(--primary-color)]">🍽️✨</div>
+          <h3 class="text-2xl font-semibold mb-4">Cenas Sensoriales</h3>
+          <p class="mb-6 text-[var(--text-color)]">Un viaje culinario y sensorial diseñado para despertar tus sentidos, conectar con el presente y disfrutar de una experiencia gastronómica consciente y única.</p>
+           <h4 class="font-semibold mb-2">La Experiencia</h4>
+          <p class="text-sm mb-6 text-[var(--text-color-light)]">Sumérgete en sabores, texturas y aromas mientras exploras la conexión entre la comida, las emociones y la atención plena. Ideal para compartir o regalar.</p>
+          <a href="/reservar" class="inline-block px-6 py-2 rounded bg-[var(--secondary-color-1)] text-white text-sm hover:bg-[var(--primary-color)] transition-colors">Ver Próximas Fechas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Filosofía / Sobre Nosotros -->
+  <section id="philosophy" class="py-20 bg-[var(--background-color-soft)]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8">Nuestra Filosofía</h2>
+      <p class="max-w-3xl mx-auto mb-8 text-lg">En SPA para el Alma creemos en la conexión profunda entre cuerpo, mente y espíritu. Nuestra misión es acompañarte a redescubrir tu sabiduría interior y tu capacidad innata de sanación a través de herramientas transformadoras.</p>
+      <h3 class="text-2xl font-semibold mt-12 mb-4">El Equipo</h3>
+      <p class="max-w-2xl mx-auto text-[var(--text-color)]">Placeholder: Presentación breve del equipo o fundador/a, su experiencia y enfoque.</p>
+      {/* Placeholder: Foto del equipo/fundador */}
+      <div class="mt-8 w-40 h-40 mx-auto rounded-full bg-gray-300 flex items-center justify-center text-gray-500">Foto</div>
+    </div>
+  </section>
+
+  <!-- Sección Testimonios -->
+  <section id="testimonials" class="py-20 bg-[var(--background-color-accent)]">
+    <div class="container mx-auto px-4">
+       <h2 class="text-4xl font-bold text-center mb-16 text-white">Lo que dicen nuestros clientes</h2>
+       {/* Placeholder: Slider o grid de testimonios */}
+       <div class="grid md:grid-cols-3 gap-8">
+         <div class="p-6 bg-white rounded shadow text-[var(--text-color)]">"Placeholder testimonio 1..." <span class="block mt-2 font-semibold">- Nombre Cliente 1</span></div>
+         <div class="p-6 bg-white rounded shadow text-[var(--text-color)]">"Placeholder testimonio 2..." <span class="block mt-2 font-semibold">- Nombre Cliente 2</span></div>
+         <div class="p-6 bg-white rounded shadow text-[var(--text-color)]">"Placeholder testimonio 3..." <span class="block mt-2 font-semibold">- Nombre Cliente 3</span></div>
+       </div>
+    </div>
+  </section>
+
+   <!-- Sección Contacto -->
+  <section id="contact" class="py-20 bg-[var(--background-color-light)]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16">Contacta con Nosotros</h2>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6">Envíanos un Mensaje</h3>
+          <form action="#" method="POST"> {/* Configurar acción */} 
+            <div class="mb-4">
+              <label for="name" class="block mb-1 text-sm">Nombre</label>
+              <input type="text" id="name" name="name" class="w-full p-3 border rounded bg-white border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block mb-1 text-sm">Email</label>
+              <input type="email" id="email" name="email" class="w-full p-3 border rounded bg-white border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block mb-1 text-sm">Mensaje</label>
+              <textarea id="message" name="message" rows="5" class="w-full p-3 border rounded bg-white border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"></textarea>
+            </div>
+            <button type="submit" class="px-8 py-3 rounded text-white bg-[var(--secondary-color-1)] hover:bg-[var(--primary-color)] transition-colors">Enviar Mensaje</button>
+          </form>
+        </div>
+        <div class="pt-8">
+          <h3 class="text-2xl font-semibold mb-6">Información</h3>
+          <p class="mb-4 flex items-center gap-2"><Icon name="mdi:email-outline" size={20}/> placeholder@spaparaelalma.com</p>
+          <p class="mb-4 flex items-center gap-2"><Icon name="mdi:phone-outline" size={20}/> +XX XXX XXX XXX</p>
+          <p class="mb-4 flex items-center gap-2"><Icon name="mdi:map-marker-outline" size={20}/> Placeholder Dirección (si aplica)</p>
+          <p class="mb-4 flex items-center gap-2"><Icon name="mdi:clock-outline" size={20}/> Placeholder Horario</p>
+          {/* Añadir mapa si es necesario */}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* La sección de reserva con Calendly se mantiene en /reservar por ahora para claridad, o se puede integrar aquí */}
+  {/* <section id="booking"> ... </section> */}
+
+</MainLayout>
+
+<style>
+  .container {
+    max-width: 1100px;
+  }
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  /* Estilos adicionales si son necesarios */
+</style> 

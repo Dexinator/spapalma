@@ -3,7 +3,7 @@ import Base from "./BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
 import Banner from "../components/Banner.astro";
 
-import YukinaConfig from "../../yukina.config";
+import SpaConfig from "../../yukina.config";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 
@@ -21,7 +21,7 @@ const props = Astro.props;
   <NavBar />
 
   {
-    YukinaConfig.bannerStyle == "LOOP" && (
+    SpaConfig.bannerStyle !== "HIDDEN" && (
       <Banner
         title={props.title}
         subTitle={props.subTitle}
@@ -33,11 +33,8 @@ const props = Astro.props;
 
   <div class="main-container my-10">
     <div class="flex flex-row items-start xl:space-x-4">
-      <div class="side-bar">
-        <SideBar />
-      </div>
       <div class="transition-leaving w-full space-y-8">
-        <main class="content onload-animation">
+        <main class="content onload-animation w-full">
           <slot />
         </main>
         <Footer />
@@ -48,15 +45,7 @@ const props = Astro.props;
 
 <style>
   .main-container {
-    @apply w-full md:min-w-[80%] md:max-w-[80%] lg:min-w-[var(--page-width-lg)] lg:max-w-[var(--page-width-lg)] xl:min-w-[var(--page-width-xl)] xl:max-w-[var(--page-width-xl)];
+    @apply w-full md:min-w-[90%] md:max-w-[90%] lg:min-w-[var(--page-width-lg)] lg:max-w-[var(--page-width-lg)] xl:min-w-[var(--page-width-xl)] xl:max-w-[var(--page-width-xl)];
     @apply md:mx-auto;
-  }
-
-  .side-bar {
-    @apply hidden min-w-[248px] xl:block;
-  }
-
-  .content {
-    @apply xl:w-[calc(var(--page-width-xl)-264px)];
   }
 </style>

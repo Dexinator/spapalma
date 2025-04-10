@@ -1,0 +1,53 @@
+🎨 Colores Corporativos
+
+    B9AFC1 — Color principal (lila suave) - Color Secundario
+
+    BFDCCA — Verde muy claro - Color principal
+
+    F5D6D1 — Rosa claro - Color Secundario
+
+    F4F2E9 — Beige claro - Color terciario
+
+    868585 — Gris medio - Color principal
+
+🖋️ Tipografías
+
+    Primaria: Gilroy-LightItalic
+
+        Solo debe usarse Gilroy para los materiales de la marca.
+
+    Secundaria: Elsie
+
+    Se permite usar cualquier grosor (weight) según el diseño.
+
+        Pesos ligeros: ideales para texto de cuerpo.
+
+        Pesos pesados: recomendados para encabezados y elementos destacados.
+
+🧿 Logotipo
+
+Se contemplan tres variantes:
+
+    Logo completo
+
+    Solo texto
+
+    Solo icono
+
+✅ Guías de uso permitidas
+
+    Puedes seguir libremente la guía de colores.
+
+    Puedes usar las formas del logotipo para composiciones.
+
+    Puedes usar imágenes con contraste en la composición.
+
+    Puedes ajustar la opacidad de los colores.
+
+❌ Restricciones
+
+    No inclinar el logotipo ni ninguna de sus variantes.
+
+    No cambiar la combinación de colores principal.
+
+    No distorsionar el logotipo.

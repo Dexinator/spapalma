@@ -1,26 +1,32 @@
-import YukinaConfig from "../../yukina.config";
+import SpaConfig from "../../yukina.config";
 import type I18nKeys from "./keys";
 import { en } from "./languages/en";
 import { zh_CN } from "./languages/zh_cn";
 
-export type Translation = {
-  [K in I18nKeys]: string;
-};
-
-const map: { [key: string]: Translation } = {
+const translations = {
   en: en,
-  "zh-cn": zh_CN,
+  "zh-CN": zh_CN,
+  // es: {} // Añadir traducciones al español aquí si es necesario
 };
 
-export function getTranslation(lang: string): Translation {
-  return map[lang.toLowerCase()] || en;
-}
+const getTranslation = (lang: string) => {
+  switch (lang) {
+    case "en":
+      return translations.en;
+    case "zh-CN":
+      return translations["zh-CN"];
+    // case "es":
+    //   return translations.es;
+    default:
+      return translations.en; // Fallback a inglés
+  }
+};
 
-export function i18n(key: I18nKeys, ...interpolations: string[]): string {
-  const lang = YukinaConfig.locale;
-  let translation = getTranslation(lang)[key];
-  interpolations.forEach((interpolation) => {
-    translation = translation.replace("{{}}", interpolation);
-  });
-  return translation;
+export function i18n(key: I18nKeys | string): string {
+  const lang = SpaConfig.locale;
+  const translationSet = getTranslation(lang);
+
+  // Intentar obtener la traducción, si no existe, devolver la clave
+  const translation = translationSet[key as keyof typeof translationSet];
+  return translation !== undefined ? translation : key;
 }

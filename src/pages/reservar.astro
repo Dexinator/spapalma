@@ -1,0 +1,28 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Reservar - SPA para el Alma">
+  <div class="container mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold text-center mb-12" style="font-family: 'Elsie', serif; color: #868585;">Agenda tu Experiencia</h1>
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div id="biodecodificacion">
+        <h2 class="text-2xl font-semibold text-center mb-6" style="font-family: 'Elsie', serif; color: #868585;">Sesión de Biodecodificación</h2>
+        <!-- Calendly Biodecodificación -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/badillo-delgado-jorge/30min?primary_color=91b79b" style="min-width:320px;height:700px;"></div>
+      </div>
+      <div id="cena-sensorial">
+        <h2 class="text-2xl font-semibold text-center mb-6" style="font-family: 'Elsie', serif; color: #868585;">Cena Sensorial</h2>
+        <!-- Calendly Cena Sensorial -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/badillo-delgado-jorge/cena-sensorial?primary_color=91b79b" style="min-width:320px;height:700px;"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</MainLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+  }
+</style> 

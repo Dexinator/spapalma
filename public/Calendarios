@@ -1,0 +1,9 @@
+    
+    Calendario para citas
+    <div class="calendly-inline-widget" data-url="https://calendly.com/badillo-delgado-jorge/30min?primary_color=91b79b" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+
+    Calendario para cena sensorial
+<div class="calendly-inline-widget" data-url="https://calendly.com/badillo-delgado-jorge/cena-sensorial?primary_color=91b79b" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

@@ -8,49 +8,99 @@ import "overlayscrollbars/overlayscrollbars.css";
 
 <style is:global>
   :root {
-    --hue: 300;
+    /* Paleta de SPA para el Alma */
+    --primary-color: #BFDCCA; /* Verde muy claro */
+    --secondary-color-1: #B9AFC1; /* Lila suave */
+    --secondary-color-2: #F5D6D1; /* Rosa claro */
+    --tertiary-color: #F4F2E9; /* Beige claro */
+    --text-color-base: #868585; /* Gris medio */
+    --text-color-dark: #5a5a5a; /* Gris más oscuro para contraste o títulos */
+    --text-color-light: #a0a0a0; /* Gris más claro para subtítulos o ayudas */
+    --background-color-light: #FFFFFF; /* Fondo principal claro */
+    --background-color-soft: var(--tertiary-color); /* Fondo suave beige */
+    --background-color-accent: var(--primary-color); /* Fondo de acento verde */
 
-    --primary-color: oklch(70% 0.15 var(--hue));
-    --primary-color-lighten: oklch(95% 0.02 var(--hue));
-    --primary-color-hover: oklch(90% 0.025 var(--hue));
-    --primary-color-transparent: oklch(70% 0.15 var(--hue) / 15%);
-    --text-color: oklch(30% 0 0);
-    --text-color-lighten: oklch(50% 0 0);
-    --card-color: oklch(100% 0 0);
-    --card-color-transparent: oklch(100% 0 0 / 85%);
-    --background-color: oklch(97% 0.01 var(--hue));
+    /* Reasignar variables del tema original a nuestra paleta */
+    --primary-color-lighten: #e6f0ea; /* Versión más clara del verde */
+    --primary-color-hover: #abd1b9; /* Versión más oscura/saturada para hover */
+    --primary-color-transparent: rgba(191, 220, 202, 0.15); /* Verde transparente */
 
-    --brand-font: "Raleway", "Noto Sans SC", sans-serif;
-    --primary-font: "Noto Sans SC", sans-serif;
-    --code-font: "JetBrains Mono", "Fira Code", monospace;
+    --text-color: var(--text-color-base);
+    --text-color-lighten: var(--text-color-light);
+    --card-color: var(--background-color-soft);
+    --card-color-transparent: rgba(244, 242, 233, 0.85); /* Beige transparente */
+    --background-color: var(--background-color-light);
 
+    /* Fuentes - Asegúrate de importarlas correctamente */
+    --brand-font: 'Elsie', serif; /* Fuente principal para marca/títulos grandes */
+    --primary-font: 'Gilroy-LightItalic', sans-serif; /* Fuente principal para cuerpo */
+    --code-font: monospace; /* Mantener fuente monoespaciada */
+
+    /* Otras variables del tema original (ajustar si es necesario) */
+    --hue: 145; /* Matiz aproximado del verde #BFDCCA */
     --page-width-lg: 992px;
-    --page-width-xl: 1264px;
-
-    --banner-height: 55vh;
+    --page-width-xl: 1200px; /* Ajustar si se prefiere otro ancho */
+    --banner-height: 60vh; /* Altura del banner */
     --title-font: var(--brand-font);
-    --title-color: oklch(100% 0 0 / 95%);
-    --subtitle-font: var(--brand-font);
-    --subtitle-color: oklch(100% 0 0 / 85%);
-
+    --title-color: var(--text-color-dark);
+    --subtitle-font: var(--primary-font);
+    --subtitle-color: var(--text-color-light);
     --onload-animation-delay: 100ms;
     --onload-animation-interval: 100ms;
   }
 
   :root.dark {
-    --primary-color: oklch(70% 0.125 var(--hue));
-    --primary-color-lighten: oklch(40% 0.04 var(--hue));
-    --primary-color-hover: oklch(20% 0.015 var(--hue));
-    --text-color: oklch(95% 0.002 var(--hue));
-    --text-color-lighten: oklch(90% 0.002 var(--hue));
-    --card-color: oklch(25% 0.02 var(--hue));
-    --card-color-lighten: oklch(40% 0.04 var(--hue));
-    --card-color-transparent: oklch(30% 0.025 var(--hue) / 85%);
-    --background-color: oklch(17.5% 0.015 var(--hue));
+     /* Definir paleta oscura si se necesita */
+     /* Ejemplo rápido invirtiendo claridad */
+    --primary-color: #5f8a73;
+    --secondary-color-1: #8d839a;
+    --secondary-color-2: #d9aca6;
+    --tertiary-color: #3a3831;
+    --text-color-base: #d1d1d1;
+    --text-color-dark: #ffffff;
+    --text-color-light: #b0b0b0;
+    --background-color-light: #2a2a2a;
+    --background-color-soft: var(--tertiary-color);
+    --background-color-accent: var(--primary-color);
+
+    --primary-color-lighten: #3c5a4a;
+    --primary-color-hover: #8dc0a9;
+    --primary-color-transparent: rgba(95, 138, 115, 0.15);
+
+    --text-color: var(--text-color-base);
+    --text-color-lighten: var(--text-color-light);
+    --card-color: var(--background-color-soft);
+    --card-color-transparent: rgba(58, 56, 49, 0.85);
+    --background-color: var(--background-color-light);
+
+    --title-color: var(--text-color-dark);
+    --subtitle-color: var(--text-color-light);
   }
 
+  /* Asegurar que los estilos base usen las nuevas variables */
+  body {
+      font-family: var(--primary-font);
+      color: var(--text-color);
+      background-color: var(--background-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--brand-font);
+      color: var(--text-color-dark);
+  }
+
+  a {
+      color: var(--secondary-color-1); /* Usar lila para enlaces */
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  a:hover {
+      color: var(--primary-color); /* Verde al hacer hover */
+  }
+
+  /* ... (resto de estilos globales como scrollbar, animations, etc.) ... */
   .swup-progress-bar {
     height: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Usar color primario */
   }
 </style>
